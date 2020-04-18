@@ -8,7 +8,7 @@ pipeline {
 	
 		stage ('Clone') {
             steps {
-                git branch: 'master', url: "https://github.com/sforcloud/docker-sample-website.git"
+                git branch: 'master', url: "https://github.com/sbasurya/docker-sample-website.git"
             }
 			}
         stage('Build') { 
@@ -20,20 +20,20 @@ pipeline {
         stage('Tag') { 
             steps {
                 echo "hello Tag Stage"
-				sh "docker tag jenkins-docker sforcloud/jenkins-image"
+				sh "docker tag jenkins-docker sbasurya/jenkins-image"
 				
             }
         }
         stage('Login') { 
             steps {
                 echo "Hello Login Stage"
-				sh "docker login --username=sforcloud --password=Asus12345"
+				sh "docker login --username=sbasurya --password=Mohanprudhvi30"
             }
         }
 		stage('Push') { 
             steps {
                 echo "Hello Pushing Image to DockerHub"
-				sh "docker push sforcloud/jenkins-image"
+				sh "docker push sbasurya/jenkins-image"
             }
         }
     }
