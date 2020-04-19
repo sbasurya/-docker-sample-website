@@ -1,8 +1,5 @@
 pipeline {
-	node('Jenkins Slave') {
-    // some block
-}
-        agent {
+	agent {
   label 'Jenkins Slave'
 }
 	
