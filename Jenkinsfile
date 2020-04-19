@@ -2,6 +2,9 @@ pipeline {
         agent {
   label 'Jenkins Slave'
 }
+	node('Jenkins Slave') {
+    // some block
+}
 	
 	
     stages {
