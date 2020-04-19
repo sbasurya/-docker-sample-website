@@ -1,8 +1,7 @@
 pipeline {
 	agent {
-  label 'Jenkins Slave'
+  label 'devserver1'
 }
-	
 	
     stages {
 	
